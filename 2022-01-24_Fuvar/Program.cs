@@ -15,12 +15,21 @@ namespace _2022_01_24_Fuvar
 		public double viteldij { get; set; }
 		public double borravalo { get; set; }
 		public string fizetesMod { get; set; }
+		
 		public Fuvar(string s)
-		{ 
-		
-		
-		
-		
+			
+		{
+			string[] db = s.Split(';');
+			taxiAzonosito = int.Parse(db[0]);
+			utazasIdopontja = db[1];
+			utazasIdotartama = int.Parse(db[2]);
+			megtettTavolsag = double.Parse(db[3]);
+			viteldij = double.Parse(db[4]);
+			borravalo = double.Parse(db[5]);
+			fizetesMod = db[6];
+
+
+
 		}
 
 		}
