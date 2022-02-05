@@ -37,6 +37,11 @@ namespace _2022_01_24_Fuvar
 	{
 		static void Main(string[] args)
 		{
+			List<Fuvar> fuvarok = new List<Fuvar>();
+			File.ReadAllLines("fuvar.csv").Skip(1).ToList().ForEach((s) => fuvarok.Add(new Fuvar(s)));
+
+			Console.WriteLine($"3. feladat: {fuvarok.Count} fuvar");
+
 		}
 	}
 }
